@@ -13,7 +13,7 @@
             :type="showPassword ? 'text' : 'password'"
             label="Password"
             prepend-icon="lock"
-            append-icon="visibility_off" 
+            :append-icon="showPassword ? 'visibility_on' : 'visibility_off'" 
             @click:append="showPassword = !showPassword"/>
         </v-form>
       </v-card-text>
@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
 
 export default {
   name: 'App',
