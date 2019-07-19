@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-card>
-      <v-card-title>
+    <v-card class="mx-auto mt-5 pa-2">
+      <v-card-title class="pb-0">
         <h1>Login</h1>
       </v-card-title>
       <v-card-text>
@@ -9,11 +9,12 @@
           <v-text-field 
             label="Username"
             prepend-icon="account_circle" />
-          <v-text-field 
-            label="Password" 
-            type="password"
+          <v-text-field
+            :type="showPassword ? 'text' : 'password'"
+            label="Password"
             prepend-icon="lock"
-            append-icon="visibility_off" />
+            append-icon="visibility_off" 
+            @click:append="showPassword = !showPassword"/>
         </v-form>
       </v-card-text>
       <v-card-actions>
@@ -29,12 +30,9 @@ import HelloWorld from './components/HelloWorld'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data () {
     return {
-      //
+      showPassword: false
     }
   }
 }
@@ -43,6 +41,6 @@ export default {
 <style>
 
 .v-card {
-  width: 500px;
+  width: 400px;
 }
 </style>
