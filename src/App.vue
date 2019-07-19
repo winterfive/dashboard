@@ -1,23 +1,26 @@
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-toolbar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <v-card>
+      <v-card-title>
+        <h1>Login</h1>
+      </v-card-title>
+      <v-card-text>
+        <v-form>
+          <v-text-field 
+            label="Username"
+            prepend-icon="account_circle" />
+          <v-text-field 
+            label="Password" 
+            type="password"
+            prepend-icon="lock"
+            append-icon="visibility_off" />
+        </v-form>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn color="success">Register</v-btn>
+        <v-btn color="info">Login</v-btn>
+      </v-card-actions>
+    </v-card>
   </v-app>
 </template>
 
@@ -36,3 +39,10 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.v-card {
+  width: 500px;
+}
+</style>
