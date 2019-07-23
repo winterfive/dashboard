@@ -26,16 +26,17 @@
 <script>
 export default {
   data() {
-    showPassword: false
-  }
-    
+    return {
+      showPassword: false
+    }    
+  }   
 }
 </script>
 
 <style>
 
 .v-card {
-width: 400px;
+  width: 400px;
 }
 </style>
 
